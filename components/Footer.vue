@@ -54,7 +54,7 @@
           <input
             type="text"
             placeholder="Your email address..."
-            class="px-4 py-2 bg-gray-900 rounded-md"
+            class="px-4 py-2 bg-gray-800 rounded-md"
           />
         </form>
       </div>
