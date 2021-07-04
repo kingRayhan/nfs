@@ -5,10 +5,41 @@
     </a>
 
     <div class="flex space-x-4">
-      <a href="#">Home</a>
-      <a href="#">Books</a>
-      <a href="#">News</a>
-      <a href="#">About Us</a>
+      <nuxt-link
+        class="text-lg capitalize"
+        v-for="link in menu"
+        :key="link.label"
+        :to="link.to"
+      >
+        {{ link.label }}
+      </nuxt-link>
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      menu: [
+        {
+          label: "Home",
+          to: "/"
+        },
+        {
+          label: "books",
+          to: "/books"
+        },
+        {
+          label: "authors",
+          to: "/authors"
+        },
+        {
+          label: "bookzone",
+          to: "/bookzone"
+        }
+      ]
+    };
+  }
+};
+</script>

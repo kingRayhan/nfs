@@ -1,33 +1,11 @@
 <template>
   <div class="my-10 wrapper">
-    <h2 class="text-4xl font-bold text-center text-warning">
-      Pick your next book
+    <h2 class="text-4xl font-bold text-warning">
+      Our Books
     </h2>
-    <!-- Filters -->
-    <div class="mt-8 space-x-5 text-center">
-      <button
-        class="font-bold uppercase"
-        :class="{ 'text-warning': filterMode === 1 }"
-        @click="filterMode = 1"
-      >
-        new release
-      </button>
-      <button
-        class="font-bold uppercase"
-        :class="{ 'text-warning': filterMode === 2 }"
-        @click="filterMode = 2"
-      >
-        coming soon
-      </button>
-      <button
-        class="font-bold uppercase"
-        :class="{ 'text-warning': filterMode === 3 }"
-        @click="filterMode = 3"
-      >
-        most appreciated
-      </button>
+    <div class="grid grid-cols-2 gap-10 mt-16 md:grid-cols-5">
+      <BookCard v-for="book in books" :book="book" :key="book.id" />
     </div>
-
     <div class="grid grid-cols-2 gap-10 mt-16 md:grid-cols-5">
       <BookCard v-for="book in books" :book="book" :key="book.id" />
     </div>

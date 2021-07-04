@@ -1,8 +1,7 @@
 <template>
   <div>
     <Hero />
-    <FeaturedCategory />
     <PickBooks />
-    <LatestArticles />
+    <UnboxingAndReviews />
   </div>
 </template>

@@ -1,12 +1,12 @@
 <template>
   <div>
-    <a href="#">
+    <nuxt-link to="/books/123">
       <img class="mx-auto" :src="book.thumbnail" alt="" />
-    </a>
+    </nuxt-link>
 
     <div class="mt-3 text-center">
       <h3 class="text-white">
-        <a href="#">{{ book.name }}</a>
+        <nuxt-link to="/books/123">{{ book.name }}</nuxt-link>
       </h3>
       <p class="text-gray-400">{{ book.author }}</p>
     </div>
