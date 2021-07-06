@@ -1,18 +1,18 @@
 module.exports = {
   purge: [],
-  mode: 'jit',
+  mode: "jit",
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
       colors: {
-        black: '#121923',
-        warning: '#FDBB40',
-        danger: '#ED1C24'
+        black: "#121923",
+        warning: "#FDBB40",
+        danger: "#ED1C24"
       }
-    },
+    }
   },
   variants: {
-    extend: {},
+    extend: {}
   },
-  plugins: [],
-}
+  plugins: [require("@tailwindcss/aspect-ratio")]
+};

@@ -1,7 +1,7 @@
 <template>
   <div>
     <nuxt-link :to="link">
-      <img class="mx-auto" :src="thumbnail" :alt="book.title" />
+      <img class="mx-auto rounded-md" :src="thumbnail" :alt="book.title" />
     </nuxt-link>
 
     <div class="mt-3 text-center">
@@ -23,8 +23,8 @@ export default {
     },
     link() {
       return {
-        name: "books-bookId",
-        params: { bookId: this.book.slug.current }
+        name: "books-slug",
+        params: { slug: this.book.slug.current }
       };
     }
   }
