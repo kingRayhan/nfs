@@ -125,7 +125,7 @@ const query = groq`
 export default {
   head() {
     return {
-      title: "ee"
+      title: this.book.title || "Please wait..."
     };
   },
   data() {
