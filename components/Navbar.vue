@@ -1,8 +1,8 @@
 <template>
   <div class="flex items-center justify-between my-5 wrapper">
-    <a href="#">
+    <nuxt-link to="/">
       <Logo />
-    </a>
+    </nuxt-link>
 
     <div class="flex space-x-4">
       <nuxt-link

@@ -30,14 +30,14 @@
     </div>
 
     <!-- Content start -->
-    <div class="w-8/12 mx-auto my-20">
+    <div class="mx-auto my-20 md:w-8/12">
       <h1 class="text-2xl font-bold">
         E-Business and E-Commerce Management: Strategy, Implementation and
         Practice
       </h1>
 
       <div class="grid grid-cols-1 gap-10 md:grid-cols-12">
-        <div class="col-span-8">
+        <div class="col-span-12 md:col-span-8">
           <!-- meta infos -->
           <div class="flex my-5 space-x-4">
             <div>
@@ -67,7 +67,7 @@
             ventilation rate if the precise usage were to be followed.
           </p>
         </div>
-        <div class="col-span-4">
+        <div class="col-span-12 md:col-span-4">
           <h3 class="text-lg font-bold">About the author</h3>
           <div class="flex items-center my-5 space-x-2">
             <img
