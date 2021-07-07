@@ -24,7 +24,7 @@ export default {
     link() {
       return {
         name: "books-slug",
-        params: { slug: this.book.slug.current }
+        params: { slug: this.book.slug }
       };
     }
   }

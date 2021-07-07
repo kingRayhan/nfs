@@ -14,17 +14,17 @@
 import { groq } from "@nuxtjs/sanity";
 
 const query = groq`
-  *[_type=="book"]{
-    title,
-    slug,
-    connction_edition{
-      price,
-      "images": images[].asset->url
-    },
-    author->{
-      name
-    }
+*[_type=="book"]{
+  title,
+  "slug": slug.current,
+  connction_edition{
+    price,
+    "images": images[].asset->url
+  },
+  author->{
+    name
   }
+}
 `;
 
 export default {
