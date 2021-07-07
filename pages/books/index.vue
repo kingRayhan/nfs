@@ -26,6 +26,7 @@ const query = groq`
     }
   }
 `;
+
 export default {
   head: {
     title: "Our all books"

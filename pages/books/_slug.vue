@@ -100,26 +100,32 @@
 import { groq } from "@nuxtjs/sanity";
 
 const query = groq`
-  *[_type=="book" && slug.current == $slug][0]{
-    title,
-    slug,
+*[_type=="book" && slug.current == $slug][0]{
+  title,
+  slug,
+  description,
+  publication_name,
+  isbn,
+  connction_edition{
+    price,
+    "images": images[].asset->url
+  },
+  paperback_edition{
+    price,
+    "images": images[].asset->url
+  },
+  author->{
+    name,
     description,
-    publication_name,
-    isbn,
-    connction_edition{
-      price,
-      "images": images[].asset->url
-    },
-    paperback_edition{
-      price,
-      "images": images[].asset->url
-    },
-    author->{
-      name,
-      description,
-      "image": image.asset->url
-    }
+    "image": image.asset->url
+  },
+  unboxing_videos[]->{
+    reviewer,
+    title,
+    "thumbnail": thumbnail.asset->url,
+    youtube_id
   }
+}
 `;
 
 export default {
